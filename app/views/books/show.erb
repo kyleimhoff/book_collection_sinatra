@@ -1,0 +1,11 @@
+<h1><%= @book.title%><h1><br>
+<h3><%= @book.author%><h3>
+<a href='/books'>View Full Library</a>
+
+  <div>
+    <a href="/books/<%= @book.id %>/edit"><button>Edit</button></a> 
+    <form method="post" action="/books/<%= @book.id %>" style="display: inline-block;">
+      <input type="hidden" name="_method" value="delete" />
+      <input type="submit" value="Delete" />
+    </form>
+</div>

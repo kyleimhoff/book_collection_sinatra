@@ -1,0 +1,8 @@
+<h1> Edit your book </h1>
+
+<form action="/books/<%= @book.id %>" method='POST'>
+<input id="hidden" type="hidden" name="_method" value="patch">
+Title: <input type=text value="<%= @book.title %>" name='title'><br>
+Author: <input type=text value="<%= @book.author %>" name='author'><br>
+<input type=submit>
+</form>
