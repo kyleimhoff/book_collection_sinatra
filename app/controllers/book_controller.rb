@@ -21,6 +21,7 @@ class BookController < ApplicationController
 #read
     get '/books/:id' do 
         set_book
+        redirect_if_not_authorized
         erb :'/books/show'
     end
 
